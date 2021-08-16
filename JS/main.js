@@ -39,8 +39,10 @@ async function getAllPokemons(){
 
 async function clearChildContent(){
     const myNode = document.getElementById("pokemon");
-    while (myNode.firstChild) {
-         await clearNode(myNode);
+    if(myNode.hasChildNodes){
+        while (myNode.firstChild) {
+            await clearNode(myNode);
+        }
     }
 }
 
@@ -48,7 +50,6 @@ async function clearNode(node){
     await node.removeChild(node.lastChild);
 }
 
-clearChildContent();
 getAllPokemons();
 
 function getSelectedRegion(){
