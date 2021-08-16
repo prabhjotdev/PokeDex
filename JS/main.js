@@ -50,64 +50,66 @@ async function clearNode(node){
     await node.removeChild(node.lastChild);
 }
 
-getAllPokemons();
+window.onload = async function() {
+    await getAllPokemons();
+}
 
-function getSelectedRegion(){
+async function getSelectedRegion(){
     const region = document.getElementById('region-select').value;
     switch(region){
         case 'kanto':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 1;
             num_of_pokemon = 152;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'johto':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 152;
             num_of_pokemon = 252;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'hoenn':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 252;
             num_of_pokemon = 387;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'sinnoh':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 387;
             num_of_pokemon = 494;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'unova':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 494;
             num_of_pokemon = 650;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'kalos':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 650;
             num_of_pokemon = 722;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'alola':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 722;
             num_of_pokemon = 810;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         case 'galar':
-            clearChildContent();
+            await clearChildContent();
             startIndex = 810;
             num_of_pokemon = 899;
-            getAllPokemons();
+            await getAllPokemons();
             break;
         default:
-            clearChildContent();
+            await clearChildContent();
             startIndex = 1;
             num_of_pokemon = 899;
-            getAllPokemons();
+            await getAllPokemons();
             break;
     }
 }
