@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+    <title>Pokédex</title>
+    <script src="./JS/main.js"></script>
+</head>
+
+<body>
+    <h1>My PokéDex</h1>
+    <label for="region-select">Choose a Region:</label>
+
+    <select name="region" id="region-select" onchange='getSelectedRegion()'>
+        <option value="default">--Please choose an option--</option>
+        <option value="kanto">kanto</option>
+        <option value="johto">Johto</option>
+        <option value="hoenn">Hoenn</option>
+        <option value="sinnoh">Sinnoh</option>
+        <option value="unova">Unova</option>
+        <option value="kalos">Kalos</option>
+        <option value="alola">Alola</option>
+        <option value="galar">Galar</option>
+    </select>
+    <div id="pokemon" class="poke-container"></div>
+</body>
+
+</html>
